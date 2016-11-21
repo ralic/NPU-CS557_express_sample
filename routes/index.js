@@ -5,6 +5,11 @@ var Item = require('../models/Item');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
+    res.render("admin", {app: "admin"});
+});
+
+/* GET book list page. */
+router.get('/list', function (req, res, next) {
     res.render("list", {app: ""});
 });
 
