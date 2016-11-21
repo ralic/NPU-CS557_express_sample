@@ -58,6 +58,7 @@ app.get('/api/get', require("./routes/api/get"));
 app.post('/api/add', require("./routes/api/add"));
 app.post('/api/edit', require("./routes/api/edit"));
 app.post('/api/delete', require("./routes/api/delete"));
+app.use('/admin', require("./routes/admin"));
 app.use('/', routes);
 app.use('/users', users);
 // catch 404 and forward to error handler
