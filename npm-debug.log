@@ -1,0 +1,62 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'app.json',
+1 verbose cli   '--global' ]
+2 info using npm@3.10.9
+3 info using node@v6.6.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData app.json
+8 silly fetchOtherPackageData app.json
+9 silly cache add args [ 'app.json', null ]
+10 verbose cache add spec app.json
+11 silly cache add parsed spec Result {
+11 silly cache add   raw: 'app.json',
+11 silly cache add   scope: null,
+11 silly cache add   escapedName: 'app.json',
+11 silly cache add   name: null,
+11 silly cache add   rawSpec: 'app.json',
+11 silly cache add   spec: '/Users/raliclo/Downloads/NPU-CS557_express_sample/app.json',
+11 silly cache add   type: 'local' }
+12 silly addLocalTarball shasum (computed) ae8781043c89cf8c264a8274028141bf3b89605f
+13 verbose addTmpTarball /Users/raliclo/Downloads/NPU-CS557_express_sample/app.json not in flight; adding
+14 verbose correctMkdir /var/root/.npm correctMkdir not in flight; initializing
+15 verbose addTmpTarball validating metadata from /Users/raliclo/Downloads/NPU-CS557_express_sample/app.json
+16 verbose tar unpack /Users/raliclo/Downloads/NPU-CS557_express_sample/app.json
+17 verbose tar unpacking to /tmp/npm-87466-36745f88/unpack-c051b41d
+18 silly gentlyRm /tmp/npm-87466-36745f88/unpack-c051b41d is being purged
+19 verbose gentlyRm don't care about contents; nuking /tmp/npm-87466-36745f88/unpack-c051b41d
+20 silly gunzTarPerm modes [ '700', '600' ]
+21 error not a package /Users/raliclo/Downloads/NPU-CS557_express_sample/app.json
+22 error addLocal Could not install /Users/raliclo/Downloads/NPU-CS557_express_sample/app.json
+23 silly fetchPackageMetaData Error: ENOENT: no such file or directory, open '/tmp/npm-87466-36745f88/unpack-c051b41d/package.json'
+23 silly fetchPackageMetaData     at Error (native)
+23 silly fetchPackageMetaData  error for app.json { Error: ENOENT: no such file or directory, open '/tmp/npm-87466-36745f88/unpack-c051b41d/package.json'
+23 silly fetchPackageMetaData     at Error (native)
+23 silly fetchPackageMetaData   errno: -2,
+23 silly fetchPackageMetaData   code: 'ENOENT',
+23 silly fetchPackageMetaData   syscall: 'open',
+23 silly fetchPackageMetaData   path: '/tmp/npm-87466-36745f88/unpack-c051b41d/package.json' }
+24 silly rollbackFailedOptional Starting
+25 silly rollbackFailedOptional Finishing
+26 silly runTopLevelLifecycles Finishing
+27 silly install printInstalled
+28 verbose stack Error: ENOENT: no such file or directory, open '/tmp/npm-87466-36745f88/unpack-c051b41d/package.json'
+28 verbose stack     at Error (native)
+29 verbose cwd /Users/raliclo/Downloads/NPU-CS557_express_sample
+30 error Darwin 16.1.0
+31 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "app.json" "--global"
+32 error node v6.6.0
+33 error npm  v3.10.9
+34 error path /tmp/npm-87466-36745f88/unpack-c051b41d/package.json
+35 error code ENOENT
+36 error errno -2
+37 error syscall open
+38 error enoent ENOENT: no such file or directory, open '/tmp/npm-87466-36745f88/unpack-c051b41d/package.json'
+39 error enoent ENOENT: no such file or directory, open '/tmp/npm-87466-36745f88/unpack-c051b41d/package.json'
+39 error enoent This is most likely not a problem with npm itself
+39 error enoent and is related to npm not being able to find a file.
+40 verbose exit [ -2, true ]

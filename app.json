@@ -1,4 +1,3 @@
-
 {
   "name": "NPU-CS557_express_sample",
   "description": "Homework example",
@@ -8,21 +7,6 @@
     "Node.js",
     "Jade.js"
   ],
-  "website": "",
-  "repository": "",
-  "logo": "",
-  "success_url": "/",
-  "scripts": {
-    "postdeploy": "npm bin/www"
-  },
-  "env": {
-  },
-  "formation": {
-  },
-  "image": "",
-  "addons": [
-  ],
-  "buildpacks": [
-  ]
+  "addons": [],
+  "env": {}
 }
-https://devcenter.heroku.com/articles/app-json-schema

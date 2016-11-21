@@ -1,0 +1,28 @@
+#
+https://devcenter.heroku.com/articles/app-json-schema
+{
+  "name": "NPU-CS557_express_sample",
+  "description": "Homework example",
+  "keywords": [
+    "Angular.js",
+    "Express.js",
+    "Node.js",
+    "Jade.js"
+  ],
+  "website": "",
+  "repository": "",
+  "logo": "",
+  "success_url": "/",
+  "scripts": {
+    "postdeploy": "npm bin/www"
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "image": "",
+  "addons": [
+  ],
+  "buildpacks": [
+  ]
+}
