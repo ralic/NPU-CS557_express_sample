@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 {
   "name": "NPU-CS557_express_sample",
@@ -14,11 +15,17 @@
   "success_url": "/",
   "scripts": {
     "postdeploy": "npm bin/www"
+=======
+{
+  "name": "NPU-CS557_express_sample",
+  "scripts": {
+>>>>>>> c1d4ef6e7db28268a65ade52571894e8abfa2547
   },
   "env": {
   },
   "formation": {
   },
+<<<<<<< HEAD
   "image": "",
   "addons": [
   ],
@@ -26,3 +33,12 @@
   ]
 }
 // https://devcenter.heroku.com/articles/app-json-schema
+=======
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}
+>>>>>>> c1d4ef6e7db28268a65ade52571894e8abfa2547
