@@ -1,6 +1,7 @@
 {
   "name": "NPU-CS557_express_sample",
   "description": "Homework example",
+  "repository": ",https://github.com/ralic/NPU-CS557_express_sample",
   "keywords": [
     "Angular.js",
     "Express.js",
@@ -10,4 +11,5 @@
   "image": "heroku/nodejs",
   "addons": [],
   "env": {}
+  
 }
