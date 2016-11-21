@@ -9,7 +9,7 @@ router.get('/', function (req, res, next) {
 });
 
 /* GET book list page. */
-router.get('/list', function (req, res, next) {
+router.get('/', function (req, res, next) {
     res.render("list", {app: ""});
 });
 
