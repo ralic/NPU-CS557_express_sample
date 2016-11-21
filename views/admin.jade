@@ -4,6 +4,7 @@ block content
         header
             h1 Administration
             
+            h6 Angular Routing
             hr
             a(href="/") Home
             span  | 
@@ -11,11 +12,12 @@ block content
             span  | 
             a(href="#/add") Add
 
+            h6 Express Routing
             hr
-            a(href="/") Order Page
+            a(href="./order") Order Page
             span  | 
-            a(href="#/thankyou") Thankyou Page
+            a(href="./thankyou") Thankyou Page
             span  | 
-            a(href="#/cart") Cart Page
+            a(href="./cart") Cart Page
         section(ng-view)
     script(src='/javascripts/admin.js')
