@@ -7,6 +7,7 @@
     "Node.js",
     "Jade.js"
   ],
+  "image": "heroku/nodejs",
   "addons": [],
   "env": {}
 }
