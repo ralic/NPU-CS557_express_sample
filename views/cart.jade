@@ -2,34 +2,30 @@
     To change this license header, choose License Headers in Project Properties.
     To change this template file, choose Tools | Templates
     and open the template in the editor.
-
-extends layout
+extends layout    
 block content
-  h1= title
-  p Welcome to #{title}
-  table
-    thead
-      tr
-        th Item Name
-        th Quantity
-        //- th Update
-        th Delete
-        th ID
-    tbody
-      each item in cart
+    h1=title
+    p Welocome to #{title}  
+     script(type='text/javascript' src="./sample.js")
+    table
+       thead
         tr
-          td= item.itemName
-          td   
-               form(action='/update', method='post')
-                input(type='text', name='itemqty', value='#{item.itemQty}')
-                input(type='hidden', name='itemid', value='#{item.id}')
-                input(type='submit', value='Update')
-          td
-            form(action='/remove', method='post') 
-             input(type='hidden', name='itemid', value='#{item.id}')
-             input(type='submit', value='Delete')
-          td= item.id
-  hr
-  a(href="/order") Order Page
-  hr
-  h3= message
+         th Item Name
+         th Quantity 
+         th Update
+         th Remove
+         th ID
+       tbody
+         each item in cart
+           tr(id=item.id) 
+             td
+              input(type='text', name='ItemName', value=item.itemName)
+             td
+              input(type='text', name='ItemQuantity', value=item.itemQty)
+             td
+              button(onclick="updateItem(this)") Update
+             td
+              button(onclick="removeItem(this)") Remove
+             td=item.id
+    hr
+    button(onclick="window.location='order'") Go To Order Page
