@@ -40,23 +40,29 @@ router.post('/order', function (req, res, next) {
 
 // for update session.cart
 router.post('/update', function (req, res, next) {
+    console.log(req.url)
     console.log(req.session.cart);
+    console.log(req.body)
     //  Assume request url is  /update?itemName=xxx&itemQTy=xxx&itemID=xxx
 
-    var pString = req.url.split("?")[1]
-    var pArray = pString.split("&");
-    console.log(pArray);
-    var newitemName = pArray[0].split("=")[1]
-    var newitemQty = pArray[1].split("=")[1]
-    var newitemID = pArray[2].split("=")[1]
-    console.log(newitemName, newitemQty, newitemID)
-    var tempCart = req.session.cart
-    for (var i = 0; i < tempCart.length; i++) {
-        if (tempCart[i].id === Number(newitemID)) {
-            tempCart[i].itemName = newitemName
-            tempCart[i].itemQty = newitemQty
-        }
-    }
+    // var pString = req.url.split("?")[1]
+    // var pArray = pString.split("&");
+    // console.log(pArray);
+    // var newitemName = pArray[0].split("=")[1]
+    // var newitemQty = pArray[1].split("=")[1]
+    // var newitemID = pArray[2].split("=")[1]
+    // console.log(newitemName, newitemQty, newitemID)
+
+    // var newitemName = pArray[0].split("=")[1]
+    // var newitemQty = pArray[1].split("=")[1]
+    // var newitemID = pArray[2].split("=")[1]
+    // var tempCart = req.session.cart
+    // for (var i = 0; i < tempCart.length; i++) {
+    //     if (tempCart[i].id === Number(newitemID)) {
+    //         tempCart[i].itemName = newitemName
+    //         tempCart[i].itemQty = newitemQty
+    //     }
+    // }
     console.log(req.session.cart)
     res.render('cart', {
         title: 'Cart Page',
@@ -67,20 +73,28 @@ router.post('/update', function (req, res, next) {
 
 // for REMOVE session.cart
 router.post('/remove', function (req, res, next) {
-    console.log(req.session.cart);
-    //  Assume request url is  /remove?itemID=xxx
-    var pString = req.url.split("?")[1]
-    console.log(pString)
-    var newitemID = pString.split("=")[1]
-    console.log(newitemID)
+      console.log(req.url) // Read request URL
+      console.log(req.body) // Read request form body data.
+
+
+      // * Ajax way ---  Using Read request url)
+//     console.log(req.session.cart);
+//     //  Assume request url is  /remove?itemID=xxx
+//     var pString = req.url.split("?")[1]
+//     console.log(pString)
+//     var newitemID = pString.split("=")[1]
+
+    var newitemID =req.body.itemid
     var tempCart = req.session.cart
     for (var i = 0; i < tempCart.length; i++) {
         console.log(tempCart[i].id, newitemID)
         if (tempCart[i].id == Number(newitemID)) {
-            tempCart.splice(i)
+            console.log("temp slice ", i)
+            // [Note:] Splice shoulde specify number of elements to be removed.
+            tempCart.splice(i,1) 
         }
     }
-
+//    req.sesssion.cart=tempCart
     console.log(req.session.cart)
     res.render('cart', {
         title: 'Cart Page',

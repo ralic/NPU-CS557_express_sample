@@ -1,8 +1,10 @@
 //- 
-    To change this license header, choose License Headers in Project Properties.
-    To change this template file, choose Tools | Templates
-    and open the template in the editor.
-
+    Student Info: Name=Yue Hu
+    Subject: CS532_HW1_Summer_2016
+    Filename: cart.jade
+    Date and Time: Nov 19, 2016 3:41:58 PM
+    Project Name: ClassExercise
+ 
 extends layout
 
 block content
@@ -15,22 +17,20 @@ block content
         th Quantity
         th Update
         th Delete
-        th ID
     tbody
       each item in cart
         tr
+          td= item.itemName
           form(action='/update', method='post')  
-             td                      
+             td         
                input(type='text', name='quantity', value='#{item.itemQty}')
-             td
-               input(type='text', name='itemname', value='#{item.itemName}')
+               input(type='hidden', name='itemname', value='#{item.itemName}')
              td
                input(type='submit', value='Update')
           td
-            form(action='/remove', method='post') 
-               input(type='hidden', name='itemid', value='#{item.id}')
+            form(action='/delete', method='post') 
+               input(type='hidden', name='itemname', value='#{item.itemName}')
                input(type='submit', value='Delete')
-          td= item.id
   hr
   a(href="/order") Order Page
   hr
