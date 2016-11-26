@@ -53,16 +53,18 @@ router.post('/update', function (req, res, next) {
     // var newitemID = pArray[2].split("=")[1]
     // console.log(newitemName, newitemQty, newitemID)
 
-    // var newitemName = pArray[0].split("=")[1]
-    // var newitemQty = pArray[1].split("=")[1]
-    // var newitemID = pArray[2].split("=")[1]
-    // var tempCart = req.session.cart
-    // for (var i = 0; i < tempCart.length; i++) {
-    //     if (tempCart[i].id === Number(newitemID)) {
-    //         tempCart[i].itemName = newitemName
-    //         tempCart[i].itemQty = newitemQty
-    //     }
-    // }
+    // var newitemName = req.body.itemName
+    var newitemQty = req.body.itemqty
+    var newitemID = req.body.itemid
+    var tempCart = req.session.cart
+    for (var i = 0; i < tempCart.length; i++) {
+        if (tempCart[i].id === Number(newitemID)) {
+            console.log("ID FOUNDED")
+            // tempCart[i].itemName = newitemName
+            tempCart[i].itemQty = newitemQty
+        }
+    }
+    
     console.log(req.session.cart)
     res.render('cart', {
         title: 'Cart Page',

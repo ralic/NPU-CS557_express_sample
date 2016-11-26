@@ -4,7 +4,6 @@
     and open the template in the editor.
 
 extends layout
-
 block content
   h1= title
   p Welcome to #{title}
@@ -19,17 +18,16 @@ block content
     tbody
       each item in cart
         tr
-          form(action='/update', method='post')  
-             td                      
-               input(type='text', name='quantity', value='#{item.itemQty}')
-             td
-               input(type='text', name='itemname', value='#{item.itemName}')
-             td
-               input(type='submit', value='Update')
+          td= item.itemName
+          td   
+               form(action='/update', method='post')
+                input(type='text', name='itemqty', value='#{item.itemQty}')
+                input(type='hidden', name='itemid', value='#{item.id}')
+                input(type='submit', value='Update')
           td
             form(action='/remove', method='post') 
-               input(type='hidden', name='itemid', value='#{item.id}')
-               input(type='submit', value='Delete')
+             input(type='hidden', name='itemid', value='#{item.id}')
+             input(type='submit', value='Delete')
           td= item.id
   hr
   a(href="/order") Order Page

@@ -4,6 +4,10 @@ body {
 }
 table, th, td {
     border: 1px solid black;
+   
+}
+table {
+    min-width :80%
 }
 a {
     color: #00B7FF;
